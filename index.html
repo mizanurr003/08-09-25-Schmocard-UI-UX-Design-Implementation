@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://static.readdy.ai/static/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schmocard - NFC-Enabled Cards for Google Reviews & Digital Business</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D97706',
+                        secondary: '#92400E'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .sticky-header {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(15deg) rotateX(5deg);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #F59E0B 100%);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="sticky top-0 z-50 sticky-header border-b border-gray-100">
+        <div class="w-full px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg">
+                            <i class="ri-cake-3-line text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-['Pacifico'] text-gray-900">Schmocard</span>
+                    </div>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#products" class="text-gray-700 hover:text-primary transition-colors">Products</a>
+                        <a href="#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                        <a href="#support" class="text-gray-700 hover:text-primary transition-colors">Support</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-primary transition-colors whitespace-nowrap !rounded-button">Sign In</button>
+                    <button class="bg-primary text-white px-6 py-3 hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center gradient-bg" style="background-image: url('https://readdy.ai/api/search-image?query=Playful%20marshmallow%20and%20chocolate%20s%5Cmore%20themed%20background%20with%20warm%20golden%20lighting%2C%20cozy%20campfire%20atmosphere%2C%20soft%20textures%2C%20left%20side%20with%20subtle%20gradient%20overlay%20for%20text%20readability%2C%20modern%20minimalist%20design%20elements%2C%20high%20quality%20product%20photography%20style%2C%20warm%20amber%20and%20cream%20colors%2C%20inviting%20and%20friendly%20aesthetic&width=1920&height=1080&seq=hero1&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
+        <div class="relative w-full px-6 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            Sweet Success with
+                            <span class="text-primary">NFC Cards</span>
+                        </h1>
+                        <p class="text-xl text-gray-700 leading-relaxed">
+                            Transform your business with our s'more-inspired NFC cards. Get Google reviews, share digital business cards, and create stunning bio links that make lasting impressions.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-primary text-white px-8 py-4 text-lg hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">
+                                Shop Cards
+                            </button>
+                            <button class="border-2 border-primary text-primary px-8 py-4 text-lg hover:bg-primary hover:text-white transition-colors whitespace-nowrap !rounded-button">
+                                Try Free Bio Link
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-6 pt-4">
+                            <div class="flex items-center space-x-2">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full border-2 border-white"></div>
+                                    <div class="w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
+                                    <div class="w-8 h-8 bg-purple-500 rounded-full border-2 border-white"></div>
+                                </div>
+                                <span class="text-sm text-gray-600">2,500+ happy customers</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <div class="flex text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <span class="text-sm text-gray-600">4.9/5 rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Perfect Card</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Each card is crafted with love and designed to make your business unforgettable. Pick the one that suits your needs best.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow card-3d">
+                    <div class="mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=Custom%20designed%20NFC%20business%20card%20with%20elegant%20modern%20design%2C%20premium%20materials%2C%20golden%20accents%2C%20professional%20layout%2C%20clean%20white%20background%2C%20product%20photography%20style%2C%20high%20quality%20finish%2C%20sophisticated%20branding%20elements&width=400&height=300&seq=card1&orientation=landscape"
+                            alt="Custom Design Card" class="w-full h-48 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Custom Design Card</h3>
+                    <p class="text-gray-600 mb-6">Personalize your card with custom designs, colors, and branding that perfectly represents your business identity.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Full customization options</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Premium materials</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">NFC technology included</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-4">$29.99</div>
+                        <button class="w-full bg-primary text-white py-3 hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow card-3d border-2 border-primary">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-1 text-sm font-semibold rounded-full">Most Popular</span>
+                    </div>
+                    <div class="mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=Google%20review%20NFC%20card%20with%20star%20rating%20icons%2C%20modern%20smartphone%20interface%2C%20review%20collection%20system%2C%20professional%20business%20card%20design%2C%20clean%20white%20background%2C%20technology%20focused%2C%20premium%20quality%20materials&width=400&height=300&seq=card2&orientation=landscape"
+                            alt="Google Review NFC Card" class="w-full h-48 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Google Review NFC Card</h3>
+                    <p class="text-gray-600 mb-6">Boost your online reputation effortlessly. Customers simply tap to leave Google reviews instantly.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Direct Google review link</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Analytics dashboard</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Instant setup</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-4">$24.99</div>
+                        <button class="w-full bg-primary text-white py-3 hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow card-3d">
+                    <div class="mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=Digital%20business%20card%20with%20contact%20information%2C%20social%20media%20links%2C%20professional%20networking%20design%2C%20modern%20smartphone%20display%2C%20clean%20interface%2C%20premium%20business%20card%20materials%2C%20white%20background&width=400&height=300&seq=card3&orientation=landscape"
+                            alt="Digital Business Card" class="w-full h-48 object-cover object-top rounded-lg">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Digital Business Card</h3>
+                    <p class="text-gray-600 mb-6">Share your contact information, social links, and portfolio with a simple tap. Perfect for networking events.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Contact info sharing</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Social media integration</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700">Real-time updates</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-4">$19.99</div>
+                        <button class="w-full bg-primary text-white py-3 hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Schmocard?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our NFC cards are packed with features that make networking and review collection effortless and enjoyable.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-nfc-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">NFC Technology</h3>
+                    <p class="text-gray-600">Advanced Near Field Communication technology for instant connections with any smartphone.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-google-fill text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Google Integration</h3>
+                    <p class="text-gray-600">Seamlessly collect Google reviews to boost your online reputation and search rankings.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-smartphone-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Business Cards</h3>
+                    <p class="text-gray-600">Share contact information, social links, and portfolio instantly with professional digital cards.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-link text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Free Bio Link</h3>
+                    <p class="text-gray-600">Create beautiful link-in-bio pages for free, even without purchasing a card.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Getting started with Schmocard is as easy as making s'mores around a campfire. Follow these simple steps.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-white">1</span>
+                        </div>
+                        <div class="absolute top-10 left-full w-full h-0.5 bg-primary/30 hidden md:block"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Choose Your Card</h3>
+                    <p class="text-gray-600">Select from our three card types based on your business needs and goals.</p>
+                </div>
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-white">2</span>
+                        </div>
+                        <div class="absolute top-10 left-full w-full h-0.5 bg-primary/30 hidden md:block"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Customize & Order</h3>
+                    <p class="text-gray-600">Personalize your card design and set up your digital content through our easy dashboard.</p>
+                </div>
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-white">3</span>
+                        </div>
+                        <div class="absolute top-10 left-full w-full h-0.5 bg-primary/30 hidden md:block"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Receive & Activate</h3>
+                    <p class="text-gray-600">Get your premium NFC card delivered and activate it with a simple scan using our mobile app.</p>
+                </div>
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <span class="text-2xl font-bold text-white">4</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Start Sharing</h3>
+                    <p class="text-gray-600">Begin collecting reviews, sharing your digital business card, and growing your network instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their business networking and review collection.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">5.0</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Schmocard has revolutionized how we collect Google reviews. Our rating went from 4.2 to 4.8 in just two months. The NFC technology is so smooth and customers love the experience."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">SM</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Sarah Mitchell</div>
+                            <div class="text-gray-600 text-sm">Restaurant Owner</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">5.0</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The digital business card feature is incredible. I can update my information in real-time, and networking events have become so much more efficient. No more running out of paper cards!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">MJ</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Marcus Johnson</div>
+                            <div class="text-gray-600 text-sm">Real Estate Agent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-3">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">5.0</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Even the free bio link feature is amazing! I use it for my social media and it looks so professional. When I'm ready to upgrade, I know exactly which card I want."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-semibold">EC</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Emily Chen</div>
+                            <div class="text-gray-600 text-sm">Content Creator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Join thousands of businesses already using Schmocard to collect more reviews, network better, and grow faster. Start your journey today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary text-white px-8 py-4 text-lg hover:bg-secondary transition-colors whitespace-nowrap !rounded-button">
+                    Shop Cards Now
+                </button>
+                <button class="border-2 border-primary text-primary px-8 py-4 text-lg hover:bg-primary hover:text-white transition-colors whitespace-nowrap !rounded-button">
+                    Try Free Bio Link
+                </button>
+            </div>
+            <div class="flex items-center justify-center space-x-8 mt-8 text-sm text-gray-600">
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 flex items-center justify-center">
+                        <i class="ri-shield-check-line text-primary"></i>
+                    </div>
+                    <span>Secure Payments</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 flex items-center justify-center">
+                        <i class="ri-truck-line text-primary"></i>
+                    </div>
+                    <span>Fast Shipping</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <div class="w-5 h-5 flex items-center justify-center">
+                        <i class="ri-customer-service-2-line text-primary"></i>
+                    </div>
+                    <span>24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg">
+                            <i class="ri-cake-3-line text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-['Pacifico']">Schmocard</span>
+                    </div>
+                    <p class="text-gray-400">Making business networking as sweet as s'mores with innovative NFC technology.</p>
+                    <div class="flex space-x-4">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-facebook-fill text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-twitter-fill text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-instagram-line text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
+                        </div>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-linkedin-fill text-gray-400 hover:text-primary cursor-pointer transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Custom Design Cards</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Google Review Cards</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Digital Business Cards</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Free Bio Link</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Setup Guide</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Get the latest updates and special offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+                        <button class="bg-primary px-6 py-2 hover:bg-secondary transition-colors whitespace-nowrap !rounded-button rounded-l-none">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 mb-4 md:mb-0">
+                        © 2025 Schmocard. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-visa-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-mastercard-fill text-gray-400"></i>
+                            </div>
+                            <div class="w-6 h-6 flex items-center justify-center">
+                                <i class="ri-paypal-fill text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="header-scroll-effect">
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('shadow-lg');
+                } else {
+                    header.classList.remove('shadow-lg');
+                }
+            });
+        });
+    </script>
+
+    <script id="card-hover-animations">
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-3d');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'rotateY(15deg) rotateX(5deg) scale(1.02)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+                });
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
